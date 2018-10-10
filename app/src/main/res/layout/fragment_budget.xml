@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="@dimen/dp_10"
+    app:layout_constraintCircleRadius="@dimen/dp_5">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/budget_card_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_margin="@dimen/dp_5"
+                android:id="@+id/budget_label_top"
+                android:text="@string/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_below="@id/budget_label_top"
+                android:id="@+id/budget_edt_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/background_edt"
+                android:text="@string/total"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/sp_18" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budget_card_top"
+        android:padding="@dimen/dp_5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/budget_date"
+                android:text="@string/datepicker"
+                android:padding="@dimen/dp_10"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:background="@drawable/background_login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_10"/>
+            <Spinner
+                android:layout_below="@id/budget_date"
+                android:id="@+id/budget_spiner_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"/>
+            <Spinner
+                android:id="@+id/budget_spiner_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/budget_spiner_type"
+                android:layout_marginBottom="@dimen/dp_10"/>
+            <EditText
+                android:id="@+id/budget_edt_decription"
+                android:layout_below="@id/budget_spiner_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <Button
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:id="@+id/budget_save"
+        android:textColor="@color/colorWhite"
+        android:text="@string/save"
+        android:background="@drawable/background_login_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dp_10"
+    android:background="@color/colorBackground">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/overview_card_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp_20">
+            <TextView
+                android:id="@+id/overview_label_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currentBanlace"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_below="@id/overview_label_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="500.000.000"
+                android:textSize="@dimen/sp_20"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:layout_constraintTop_toBottomOf="@id/overview_card_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:id="@+id/overview_card_summary"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_5">
+        <RelativeLayout
+            android:padding="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/overview_label_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expenseTracking"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:textStyle="bold"/>
+            <Spinner
+                android:id="@+id/overview_option_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+            <ImageView
+                android:id="@+id/overview_chart_expense"
+                android:src="@drawable/ic_balance"
+                android:layout_below="@id/overview_label_tracking"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100" />
+            <TextView
+                android:layout_below="@id/overview_option_chart"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/overview_value_income"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:text="00000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/overview_value_income"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:id="@+id/overview_value_expense"
+                android:text="00000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textStyle="bold|italic"
+                android:layout_below="@id/overview_value_expense"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/overview_value_total"
+                android:text="00000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/overview_value_income"
+                android:layout_alignLeft="@id/overview_label_income"
+                android:id="@+id/overview_label_expense"
+                android:text="@string/expenses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/overview_option_chart"
+                android:layout_centerInParent="true"
+                android:id="@+id/overview_label_income"
+                android:text="@string/income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@id/overview_value_expense"
+                android:layout_alignLeft="@id/overview_label_income"
+                android:id="@+id/overview_label_total"
+                android:text="@string/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        app:layout_constraintTop_toBottomOf="@id/overview_card_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_5">
+        <RelativeLayout
+            android:padding="@dimen/dp_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/spendLimit"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:id="@+id/overview_label_spend_limit"/>
+            <ImageView
+                android:contentDescription="@string/total"
+                android:id="@+id/overview_spend_icon"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@drawable/ic_main_home"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_below="@id/overview_label_spend_limit"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40" />
+            <TextView
+                android:id="@+id/overview_spend_name_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ten han muc"
+                android:layout_below="@id/overview_label_spend_limit"
+                android:layout_toRightOf="@id/overview_spend_icon"/>
+            <TextView
+                android:id="@+id/overview_spend_date_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10/10/2018 - 20/10/2010"
+                android:layout_below="@id/overview_spend_name_limit"
+                android:layout_toRightOf="@id/overview_spend_icon"/>
+            <TextView
+                android:id="@+id/overview_spend_value_balance_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.000.000"
+                android:layout_below="@id/overview_spend_name_limit"
+                android:layout_alignParentRight="true"/>
+            <ProgressBar
+                android:layout_below="@id/overview_spend_icon"
+                android:id="@+id/overview_spend_limit_chart"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="75"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="backgroundFlash">#B2EBF2</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorInvisible">#00000000</color>
+
+    <color name="colorBackground">#FEFEF2</color>
+    <color name="backgroundEditText">#F4F4EA</color>
+    <color name="strokeEditText">#B4B2A9</color>
+    <color name="colorBtnLogin">#53C1CB</color>
+    <color name="colorTextHintLogin">#90A4AE</color>
+    <color name="colorTextCancleLogin">#263238</color>
+
+    <color name="colorFoaltingPoin">#4FC3F7</color>
+    <color name="colorBottomBar">#E0F7FA</color>
+</resources>

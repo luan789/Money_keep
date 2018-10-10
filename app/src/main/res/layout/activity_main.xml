@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+        <FrameLayout
+            android:id="@+id/main_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/t"/>
+        <FrameLayout
+            android:id="@+id/t"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.bottomappbar.BottomAppBar
+        android:id="@+id/main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/colorBottomBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:id="@+id/menu_bot_expense"
+                android:text="@string/menuBottomExpense"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/menu_bot_budget"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:text="@string/menuBottomBuget"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:id="@+id/menu_bot_report"
+                android:text="@string/menuBottomRePort"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/menu_bot_account"
+                android:text="@string/menuBottomAccount"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorInvisible" />
+        </LinearLayout>
+    </android.support.design.bottomappbar.BottomAppBar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorFoaltingPoin"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_action_home"
+        app:borderWidth="@dimen/dp_0"
+        app:fabSize="normal"
+        app:layout_anchor="@id/main_bottom_bar"
+        app:rippleColor="@color/backgroundFlash" />
+
+</android.support.design.widget.CoordinatorLayout>

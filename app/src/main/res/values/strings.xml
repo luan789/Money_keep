@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ManaMoney</string>
+    <string name="login_id">Login ID</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="cancel_">Cancel</string>
+    <string name="loginWithMail">Login with gmail</string>
+    <!-- String Menu Bottom-->
+    <string name="menuBottomBuget">BUDGET</string>
+    <string name="menuBottomRePort">REPORT</string>
+    <string name="menuBottomAccount">ACCOUNT</string>
+    <string name="menuBottomExpense">EXPENSE</string>
+
+    <string name="currentBanlace">CURRENT BALANCE</string>
+    <string name="expenseTracking">SUMMARY</string>
+    <string name="income">Income:</string>
+    <string name="expenses">Expenses:</string>
+    <string name="total">Total:</string>
+    <string name="spendLimit">SPEND LIMIT</string>
+
+    <string name="amount">AMOUNT</string>
+    <string name="datepicker">Date Time</string>
+    <string name="save">SAVE</string>
+    <string name="content">CONTENT</string>
+</resources>
